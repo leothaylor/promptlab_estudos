@@ -1,32 +1,24 @@
-# React + TypeScript + Vite
+# PromptLab Estudos
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Ferramentas estruturadas para concursos públicos com uma proposta simples: **menos tempo garimpando, mais tempo estudando**.
 
-Currently, two official plugins are available:
+## Princípio do produto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O usuário não precisa entender de IA, escrever prompts do zero ou aprender comandos técnicos. A experiência foi desenhada para que ele encontre rapidamente a ferramenta adequada ao problema que quer resolver e forneça apenas o material necessário para receber uma saída organizada.
 
-## React Compiler
+**Lema operacional:** chegar à ferramenta certa em 2 cliques.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the Oxlint configuration
+- Vite
+- React
+- TypeScript
+- CSS
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Deploy
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+O projeto é publicado pelo GitHub Pages através do workflow em `.github/workflows/deploy.yml`.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Segurança
+
+As instruções operacionais completas dos produtos não ficam expostas no frontend público. O site contém descrições comerciais e demonstrações do formato de entrega.
