@@ -3,31 +3,31 @@ import { useState } from 'react';
 const FAQ_DATA = [
   {
     question: 'O que são as ferramentas do PromptLab Estudos?',
-    answer: 'São prompts estruturados e otimizados para uso com assistentes de IA (como ChatGPT, Claude etc.), projetados especificamente para diferentes situações de estudo para concursos públicos. Cada ferramenta resolve um problema específico: análise de editais, estudo de legislação, simulação de discursivas, entre outros.',
+    answer: 'São ferramentas prontas para tarefas específicas da preparação para concursos. Você escolhe o problema que quer resolver, fornece o material solicitado e recebe uma saída estruturada para agir. A lógica já vem preparada: você não precisa montar prompts do zero.',
   },
   {
-    question: 'Quais assistentes de IA são compatíveis?',
-    answer: 'As ferramentas são compatíveis com qualquer assistente de IA com capacidade de processamento de texto, como ChatGPT (GPT-4 ou superior), Claude, Gemini e outros. Cada produto indica o nível de capacidade necessário para resultados ideais.',
+    question: 'Preciso entender de IA para usar?',
+    answer: 'Não. A proposta do PromptLab é justamente eliminar essa barreira. Você não precisa saber escrever comandos, configurar fluxos ou entender termos técnicos. Basta escolher a ferramenta, inserir o material pedido e seguir as instruções.',
+  },
+  {
+    question: 'Preciso usar alguma IA específica?',
+    answer: 'Não. As ferramentas foram pensadas para serem usadas no assistente de IA que você já utiliza, desde que ele consiga processar as informações e instruções fornecidas.',
+  },
+  {
+    question: 'Como isso economiza meu tempo?',
+    answer: 'O ganho está no trabalho que acontece antes do estudo. Em vez de gastar horas procurando regras no edital, separando prioridades, garimpando padrões de banca ou organizando informações manualmente, você usa uma ferramenta já estruturada para transformar esse material em direção prática.',
   },
   {
     question: 'Como funciona a compra e o acesso?',
-    answer: 'O sistema de compra e checkout está em desenvolvimento. Em breve será possível adquirir as ferramentas diretamente no site. Por enquanto, o catálogo está disponível para visualização como protótipo.',
+    answer: 'O sistema de compra e checkout ainda está sendo preparado. As ferramentas podem ser exploradas no catálogo e o acesso comercial será habilitado em uma próxima etapa.',
   },
   {
     question: 'Os prompts completos ficam visíveis no site?',
-    answer: 'Não. As descrições e demonstrações exibidas são comerciais e ilustrativas. Os prompts operacionais completos são entregues apenas após a compra. Nenhum prompt real está exposto ou escondido no código desta página.',
-  },
-  {
-    question: 'Para que serve o "Raio X do Edital"?',
-    answer: 'O Raio X do Edital transforma um edital extenso em um mapa operacional. Você informa o edital e o cargo pretendido, e a ferramenta organiza etapas, prazos críticos, regras eliminatórias e próximos passos recomendados.',
+    answer: 'Não. As descrições e demonstrações exibidas servem para mostrar o funcionamento e o tipo de entrega. As instruções operacionais completas são disponibilizadas apenas no acesso ao produto.',
   },
   {
     question: 'As ferramentas funcionam para qualquer concurso?',
-    answer: 'Sim. As ferramentas são genéricas o suficiente para funcionar com qualquer concurso público, seja municipal, estadual ou federal. Quanto mais contexto você fornecer ao assistente de IA, mais precisa será a resposta.',
-  },
-  {
-    question: 'O que significa "Em breve" nos cards?',
-    answer: 'Produtos marcados como "Em breve" estão no catálogo futuro, já planejados, mas ainda em desenvolvimento. Serão lançados progressivamente após a validação da V1.',
+    answer: 'Elas foram desenhadas para diferentes contextos de concursos públicos. Quanto melhor o material fornecido — como edital, trecho de legislação, tema ou contexto da prova — mais específica tende a ser a saída.',
   },
 ];
 
@@ -41,7 +41,7 @@ export default function FAQ() {
           <div className="section-eyebrow">FAQ</div>
           <h2 className="section-title">Perguntas frequentes</h2>
           <p className="section-sub" style={{ margin: '0 auto' }}>
-            Tudo que você precisa saber antes de começar.
+            O essencial para entender como usar as ferramentas sem complicação.
           </p>
         </div>
 
