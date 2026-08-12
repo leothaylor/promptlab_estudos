@@ -44,14 +44,12 @@ export default function ProductDetail() {
 
   return (
     <div className="product-detail-page">
-      {/* Breadcrumb */}
       <div className="detail-breadcrumb container">
         <Link to="/" className="breadcrumb-link">← Todas as ferramentas</Link>
         <span className="breadcrumb-sep">/</span>
         <span className="breadcrumb-current">{product.name}</span>
       </div>
 
-      {/* Header banner */}
       <div className="detail-banner">
         <div className={`detail-visual ${visClass}`}>
           <div className="detail-visual-content">
@@ -63,9 +61,7 @@ export default function ProductDetail() {
       </div>
 
       <div className="container detail-layout">
-        {/* Main content */}
         <div className="detail-main">
-          {/* Title + meta */}
           <div className="detail-title-block">
             <div className="detail-meta-row">
               <span
@@ -86,7 +82,6 @@ export default function ProductDetail() {
             <p className="detail-description">{product.description}</p>
           </div>
 
-          {/* Problem */}
           {product.problem && (
             <div className="detail-block">
               <h2 className="detail-block-title">O problema que resolve</h2>
@@ -97,7 +92,6 @@ export default function ProductDetail() {
             </div>
           )}
 
-          {/* Ideal for */}
           {product.idealFor.length > 0 && (
             <div className="detail-block">
               <h2 className="detail-block-title">Ideal para quem</h2>
@@ -112,10 +106,9 @@ export default function ProductDetail() {
             </div>
           )}
 
-          {/* Inputs & Outputs */}
           {(product.inputs.length > 0 || product.outputs.length > 0) && (
             <div className="detail-block">
-              <h2 className="detail-block-title">Entradas e saídas</h2>
+              <h2 className="detail-block-title">O que você envia e o que recebe</h2>
               <div className="io-grid">
                 {product.inputs.length > 0 && (
                   <div className="io-card">
@@ -141,10 +134,9 @@ export default function ProductDetail() {
             </div>
           )}
 
-          {/* Benefits */}
           {product.benefits.length > 0 && (
             <div className="detail-block">
-              <h2 className="detail-block-title">Benefícios</h2>
+              <h2 className="detail-block-title">O tempo que você deixa de gastar no garimpo</h2>
               <div className="benefits-grid">
                 {product.benefits.map((b, i) => (
                   <div key={i} className="benefit-pill">
@@ -155,7 +147,6 @@ export default function ProductDetail() {
             </div>
           )}
 
-          {/* Demonstration */}
           {product.demonstration && (
             <div className="detail-block">
               <h2 className="detail-block-title">Demonstração</h2>
@@ -164,21 +155,20 @@ export default function ProductDetail() {
           )}
         </div>
 
-        {/* Sidebar */}
         <aside className="detail-sidebar">
           <div className="sidebar-card">
             {isAvailable ? (
               <>
-                <div className="sidebar-status-label">Disponível para acesso</div>
+                <div className="sidebar-status-label">Ferramenta preparada</div>
                 <div className="sidebar-price-info">
                   Preço a ser definido
-                  <span className="sidebar-price-note">O checkout será habilitado em breve.</span>
+                  <span className="sidebar-price-note">O acesso comercial será habilitado em breve.</span>
                 </div>
                 <button className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: 16 }} disabled>
-                  Em breve — acesso indisponível
+                  Acesso em breve
                 </button>
                 <div className="sidebar-proto-note">
-                  ⚗️ Este é um protótipo. O sistema de compra está em desenvolvimento.
+                  ⚡ Sem configuração técnica: escolha a ferramenta, forneça o material solicitado e siga as instruções.
                 </div>
               </>
             ) : (
@@ -194,7 +184,6 @@ export default function ProductDetail() {
             )}
           </div>
 
-          {/* Extra info */}
           {(product.recommendedUse || product.compatibility) && (
             <div className="sidebar-card sidebar-card-secondary">
               {product.recommendedUse && (
@@ -205,14 +194,13 @@ export default function ProductDetail() {
               )}
               {product.compatibility && (
                 <div className="sidebar-info-item">
-                  <div className="sidebar-info-label">Compatibilidade</div>
+                  <div className="sidebar-info-label">Uso com IA</div>
                   <p className="sidebar-info-value">{product.compatibility}</p>
                 </div>
               )}
             </div>
           )}
 
-          {/* Search terms */}
           {product.searchTerms.length > 0 && (
             <div className="sidebar-tags">
               {product.searchTerms.map((t, i) => (
