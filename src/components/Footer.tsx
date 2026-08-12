@@ -8,12 +8,12 @@ export default function Footer() {
           <div>
             <div className="footer-brand">PromptLab Estudos</div>
             <p className="footer-tagline">
-              Ferramentas estruturadas de IA para transformar estudo complexo em ação clara.
+              Menos tempo garimpando. Mais tempo estudando.
             </p>
           </div>
 
           <div className="footer-proto-badge">
-            ⚗️ Protótipo V1 — preços e checkout em breve
+            ⚡ Ferramentas prontas para usar sem precisar entender de IA
           </div>
 
           <nav className="footer-links" aria-label="Links do rodapé">
@@ -25,7 +25,7 @@ export default function Footer() {
 
           <p className="footer-copy">
             © {new Date().getFullYear()} PromptLab Estudos. Todos os direitos reservados.
-            Os prompts completos não estão expostos neste site.
+            As instruções operacionais completas não ficam expostas neste site.
           </p>
         </div>
       </div>
