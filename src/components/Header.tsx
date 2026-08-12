@@ -1,17 +1,16 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { getBrand } from '../api/catalog';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const brand = getBrand();
   const location = useLocation();
+  const baseUrl = import.meta.env.BASE_URL;
 
-  const navLinks = [
-    { to: '/', label: 'Ferramentas' },
-    { to: '/#como-funciona', label: 'Como funciona' },
-    { to: '/#comparacao', label: 'Comparativo' },
-    { to: '/#faq', label: 'FAQ' },
+  const sectionLinks = [
+    { hash: 'catalog', label: 'Ferramentas' },
+    { hash: 'como-funciona', label: 'Como funciona' },
+    { hash: 'comparacao', label: 'Economize tempo' },
+    { hash: 'faq', label: 'FAQ' },
   ];
 
   return (
@@ -27,15 +26,10 @@ export default function Header() {
             </Link>
 
             <nav className="header-nav" aria-label="Navegação principal">
-              {navLinks.map(link => (
-                link.to.startsWith('/#') ? (
-                  <a key={link.to} href={link.to} className="nav-anchor">{link.label}</a>
-                ) : (
-                  <Link key={link.to} to={link.to} className="nav-anchor"
-                    style={{ color: location.pathname === link.to ? 'var(--c-text)' : undefined }}>
-                    {link.label}
-                  </Link>
-                )
+              {sectionLinks.map(link => (
+                <a key={link.hash} href={`${baseUrl}#${link.hash}`} className="nav-anchor">
+                  {link.label}
+                </a>
               ))}
             </nav>
 
@@ -43,9 +37,9 @@ export default function Header() {
               <Link to="/demo" className="btn btn-ghost btn-sm">
                 Ver demo
               </Link>
-              <Link to="/" className="btn btn-primary btn-sm">
-                Explorar catálogo →
-              </Link>
+              <a href={`${baseUrl}#catalog`} className="btn btn-primary btn-sm">
+                Encontrar ferramenta →
+              </a>
             </div>
 
             <button
@@ -61,10 +55,10 @@ export default function Header() {
       </header>
 
       <nav className={`mobile-nav${menuOpen ? ' open' : ''}`} aria-label="Menu mobile">
-        {navLinks.map(link => (
+        {sectionLinks.map(link => (
           <a
-            key={link.to}
-            href={link.to}
+            key={link.hash}
+            href={`${baseUrl}#${link.hash}`}
             onClick={() => setMenuOpen(false)}
           >
             {link.label}
