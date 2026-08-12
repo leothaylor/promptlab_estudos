@@ -8,50 +8,48 @@ import FAQ from '../components/FAQ';
 function Hero() {
   return (
     <section className="hero-section">
-      {/* Grid background */}
       <div className="hero-grid-bg" aria-hidden="true" />
-      {/* Glow blobs */}
       <div className="hero-glow" style={{ width: 500, height: 500, top: -100, left: '50%', transform: 'translateX(-60%)', background: 'rgba(99,102,241,0.15)' }} aria-hidden="true" />
       <div className="hero-glow" style={{ width: 300, height: 300, bottom: 0, right: '10%', background: 'rgba(245,158,11,0.08)' }} aria-hidden="true" />
 
       <div className="container hero-content">
         <div className="hero-badge fade-in-up">
-          <span>⚗️</span> Protótipo V1 — catálogo em formação
+          <span>⚡</span> Não precisa entender de IA
         </div>
 
         <h1 className="display-xl fade-in-up fade-in-up-delay-1">
-          Estude com{' '}
-          <span className="text-gradient">inteligência estruturada</span>
+          Encontre o que estudar{' '}
+          <span className="text-gradient">em 2 cliques</span>
         </h1>
 
         <p className="hero-sub fade-in-up fade-in-up-delay-2">
-          Ferramentas de IA projetadas para transformar estudo complexo em ação clara.
-          Editais, legislação, discursivas, cronogramas — cada ferramenta resolve um problema real.
+          Pare de perder horas garimpando edital, legislação, banca e conteúdo para descobrir o que realmente importa.
+          Escolha o problema, abra a ferramenta certa e transforme informação espalhada em direção clara para estudar.
         </p>
 
         <div className="hero-actions fade-in-up fade-in-up-delay-3">
           <a href="#catalog" className="btn btn-primary">
-            Explorar catálogo →
+            Encontrar minha ferramenta →
           </a>
           <a href="#como-funciona" className="btn btn-ghost">
-            Como funciona
+            Ver como funciona
           </a>
         </div>
 
         <div className="hero-stats fade-in-up fade-in-up-delay-3">
           <div className="hero-stat">
+            <span className="hero-stat-num">2</span>
+            <span className="hero-stat-label">cliques para chegar à ferramenta</span>
+          </div>
+          <div className="hero-stat-div" />
+          <div className="hero-stat">
+            <span className="hero-stat-num">0</span>
+            <span className="hero-stat-label">conhecimento de IA necessário</span>
+          </div>
+          <div className="hero-stat-div" />
+          <div className="hero-stat">
             <span className="hero-stat-num">8</span>
-            <span className="hero-stat-label">ferramentas disponíveis</span>
-          </div>
-          <div className="hero-stat-div" />
-          <div className="hero-stat">
-            <span className="hero-stat-num">6</span>
-            <span className="hero-stat-label">categorias</span>
-          </div>
-          <div className="hero-stat-div" />
-          <div className="hero-stat">
-            <span className="hero-stat-num">8+</span>
-            <span className="hero-stat-label">em desenvolvimento</span>
+            <span className="hero-stat-label">ferramentas prontas</span>
           </div>
         </div>
       </div>
@@ -63,23 +61,23 @@ function HowItWorks() {
   const steps = [
     {
       icon: '🎯',
-      title: 'Identifique o problema',
-      desc: 'Escolha a ferramenta certa para o momento da preparação: início, edital, legislação, discursiva, cronograma.',
+      title: 'Escolha o que precisa resolver',
+      desc: 'Edital, legislação, banca, cronograma ou discursiva. Você começa pelo seu problema, não pela tecnologia.',
     },
     {
-      icon: '🤖',
-      title: 'Acesse seu assistente de IA',
-      desc: 'Use ChatGPT, Claude, Gemini ou outro assistente com capacidade de processar instruções estruturadas.',
+      icon: '⚡',
+      title: 'Abra a ferramenta certa',
+      desc: 'Em dois cliques você chega à ferramenta preparada para aquele tipo de tarefa. Sem montar prompt e sem aprender comandos.',
     },
     {
       icon: '📋',
-      title: 'Aplique a ferramenta',
-      desc: 'Cole o prompt adquirido, forneça os dados pedidos (edital, texto, tema) e receba a análise estruturada.',
+      title: 'Forneça seu material',
+      desc: 'Insira o edital, trecho, tema ou contexto solicitado. A própria ferramenta orienta o que precisa ser informado.',
     },
     {
       icon: '✅',
-      title: 'Transforme em ação',
-      desc: 'Cada ferramenta entrega um resultado operacional — não teoria. Mapa de prioridades, trilha, plano, análise.',
+      title: 'Receba direção para agir',
+      desc: 'Em vez de gastar tempo organizando tudo manualmente, você recebe prioridades, alertas, estrutura e próximos passos para estudar.',
     },
   ];
 
@@ -88,10 +86,9 @@ function HowItWorks() {
       <div className="container">
         <div className="section-header">
           <div className="section-eyebrow">Como funciona</div>
-          <h2 className="section-title">Da ferramenta ao resultado</h2>
+          <h2 className="section-title">Você não precisa aprender IA para usar IA</h2>
           <p className="section-sub">
-            Prompts estruturados que transformam a capacidade do seu assistente de IA
-            em respostas específicas para o seu estudo.
+            Em dois cliques você encontra a ferramenta certa. Depois, basta fornecer seu material e seguir as instruções.
           </p>
         </div>
 
@@ -114,28 +111,28 @@ function Comparison() {
   const rows = [
     {
       situation: 'Analisar um edital',
-      generic: 'Peça uma análise do concurso',
-      structured: <><strong>Raio X do Edital</strong>: mapa operacional com etapas, alertas e próximos passos</>,
+      manual: 'Ler dezenas de páginas, separar prazos, regras, etapas e conteúdo manualmente',
+      structured: <><strong>Raio X do Edital</strong>: organiza regras críticas, prioridades e próximos passos</>,
     },
     {
       situation: 'Estudar legislação',
-      generic: 'Me explique essa lei',
-      structured: <><strong>Destrinchando a Lei Seca</strong>: estudo em blocos com verificação progressiva</>,
+      manual: 'Ler artigo por artigo, tentar identificar exceções e decidir sozinho o que merece atenção',
+      structured: <><strong>Destrinchando a Lei Seca</strong>: conduz o estudo em blocos e destaca pontos relevantes</>,
     },
     {
-      situation: 'Planejar estudo',
-      generic: 'Faça um cronograma para mim',
-      structured: <><strong>Calculadora da Aprovação</strong>: plano baseado na sua rotina e peso das matérias</>,
+      situation: 'Planejar o estudo',
+      manual: 'Cruzar matérias, tempo disponível, dificuldades e peso de cada conteúdo por conta própria',
+      structured: <><strong>Calculadora da Aprovação</strong>: transforma rotina e prioridades em um plano executável</>,
     },
     {
       situation: 'Treinar discursiva',
-      generic: 'Avalie meu texto',
-      structured: <><strong>Simulador de Segunda Fase</strong>: proposta, critérios, estrutura esperada e comparação</>,
+      manual: 'Montar proposta, critérios, estrutura e revisão sem um processo consistente',
+      structured: <><strong>Simulador de Segunda Fase</strong>: organiza proposta, critérios e pontos de melhoria</>,
     },
     {
       situation: 'Entender a banca',
-      generic: 'Como a CESPE cobra Direito?',
-      structured: <><strong>Scanner de Bancas</strong>: perfil de cobrança, armadilhas e ajuste estratégico</>,
+      manual: 'Garimpar questões e tentar reconhecer sozinho padrões, armadilhas e formas de cobrança',
+      structured: <><strong>Scanner de Bancas</strong>: organiza padrões de cobrança e ajustes de preparação</>,
     },
   ];
 
@@ -143,28 +140,27 @@ function Comparison() {
     <section className="compare-section" id="comparacao">
       <div className="container">
         <div className="section-header">
-          <div className="section-eyebrow">Comparativo</div>
-          <h2 className="section-title">Pedido genérico vs. ferramenta estruturada</h2>
+          <div className="section-eyebrow">Economize tempo</div>
+          <h2 className="section-title">Menos garimpo. Mais tempo estudando.</h2>
           <p className="section-sub">
-            Um bom assistente de IA responde qualquer pergunta. Uma ferramenta estruturada
-            entrega exatamente o que você precisa para agir.
+            O objetivo não é estudar por você. É poupar o trabalho manual de procurar, separar e organizar informação antes do estudo começar.
           </p>
         </div>
 
         <div className="compare-wrapper">
-          <table className="compare-table" aria-label="Comparação entre pedido genérico e ferramenta estruturada">
+          <table className="compare-table" aria-label="Comparação entre garimpo manual e ferramenta estruturada">
             <thead>
               <tr>
                 <th style={{ background: 'var(--c-bg-card)', color: 'var(--c-text-muted)' }}>Situação</th>
-                <th style={{ background: 'rgba(100,116,139,0.1)', color: 'var(--c-text-muted)' }}>Pedido genérico</th>
-                <th style={{ background: 'rgba(99,102,241,0.1)', color: 'var(--c-primary-2)' }}>Ferramenta estruturada</th>
+                <th style={{ background: 'rgba(100,116,139,0.1)', color: 'var(--c-text-muted)' }}>Fazendo manualmente</th>
+                <th style={{ background: 'rgba(99,102,241,0.1)', color: 'var(--c-primary-2)' }}>Com a ferramenta certa</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row, i) => (
                 <tr key={i}>
                   <td style={{ background: 'var(--c-bg-card)', color: 'var(--c-text)', fontWeight: 500 }}>{row.situation}</td>
-                  <td className="col-generic" style={{ background: 'rgba(100,116,139,0.05)' }}>"{row.generic}"</td>
+                  <td className="col-generic" style={{ background: 'rgba(100,116,139,0.05)' }}>{row.manual}</td>
                   <td className="col-structured" style={{ background: 'rgba(99,102,241,0.05)' }}>{row.structured}</td>
                 </tr>
               ))}
@@ -182,10 +178,10 @@ function DemoSection() {
       <div className="container">
         <div className="section-header">
           <div className="section-eyebrow">Demonstração</div>
-          <h2 className="section-title">Veja o formato das entregas</h2>
+          <h2 className="section-title">Veja o tipo de resposta que você recebe</h2>
           <p className="section-sub">
-            Cada ferramenta produz saídas estruturadas e acionáveis.
-            Os exemplos abaixo são simulações visuais com dados fictícios.
+            Você não precisa saber escrever prompts. Cada ferramenta já vem estruturada para transformar seu material em uma saída organizada e acionável.
+            Os exemplos abaixo usam dados fictícios.
           </p>
         </div>
 
@@ -223,13 +219,12 @@ function CatalogSection() {
       <div className="container">
         <div className="section-header">
           <div className="section-eyebrow">Catálogo</div>
-          <h2 className="section-title">Ferramentas disponíveis</h2>
+          <h2 className="section-title">Escolha pelo problema que quer resolver</h2>
           <p className="section-sub">
-            Escolha a ferramenta certa para o seu momento de preparação.
+            Você não precisa conhecer termos técnicos nem saber montar instruções. Encontre a tarefa que está consumindo seu tempo e abra a ferramenta correspondente.
           </p>
         </div>
 
-        {/* Search + Filters */}
         <div className="catalog-controls">
           <div className="search-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
@@ -240,7 +235,7 @@ function CatalogSection() {
               id="product-search"
               className="search-input"
               type="search"
-              placeholder="Buscar por nome, categoria ou tema..."
+              placeholder="Buscar por problema, matéria ou tema..."
               value={query}
               onChange={e => setQuery(e.target.value)}
               aria-label="Buscar ferramentas"
@@ -261,7 +256,6 @@ function CatalogSection() {
           </div>
         </div>
 
-        {/* Available products */}
         {available.length > 0 ? (
           <>
             <div className="catalog-sub-header">
@@ -284,7 +278,6 @@ function CatalogSection() {
           </div>
         )}
 
-        {/* Coming soon */}
         {comingSoon.length > 0 && (
           <>
             <div className="divider" style={{ margin: '48px 0 32px' }} />
