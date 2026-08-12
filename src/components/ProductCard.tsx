@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { Product } from '../types/product';
 
-// Map category to a visual class
 function getCategoryVisClass(category: string): string {
   const map: Record<string, string> = {
     'Estratégia de concurso': 'vis-estrategia',
@@ -24,7 +23,6 @@ export default function ProductCard({ product }: Props) {
 
   return (
     <article className={`card product-card${!isAvailable ? ' card-coming-soon' : ''}`}>
-      {/* Visual Placeholder */}
       <div className={`product-visual ${visClass}`}>
         <span className="visual-code">{product.code}</span>
         {product.featured && (
@@ -33,7 +31,6 @@ export default function ProductCard({ product }: Props) {
       </div>
 
       <div className="product-card-body">
-        {/* Meta row */}
         <div className="product-card-meta">
           <span className={`badge ${isAvailable ? 'badge-available' : 'badge-coming-soon'}`}>
             {isAvailable ? '● Disponível' : '○ Em breve'}
@@ -43,19 +40,13 @@ export default function ProductCard({ product }: Props) {
           )}
         </div>
 
-        {/* Category */}
         <div className="product-card-category">{product.category}</div>
-
-        {/* Name */}
         <h3 className="product-card-name">{product.name}</h3>
-
-        {/* Short description */}
         <p className="product-card-desc">{product.shortDescription}</p>
 
-        {/* Footer */}
         {isAvailable ? (
           <Link to={`/product/${product.slug}`} className="btn btn-primary btn-sm product-card-cta">
-            Ver ferramenta →
+            Ver como economiza tempo →
           </Link>
         ) : (
           <div className="product-card-cta-locked">
